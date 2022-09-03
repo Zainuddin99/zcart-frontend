@@ -1,0 +1,163 @@
+body{
+    width: 100%;
+}
+aside{
+    position:sticky;
+    top: 0;
+    padding: 0px 5px;
+    margin-top: 50px;
+    display: grid;
+    place-items: center;
+}
+.mobile-filter-btn{
+    display:none
+}
+aside > *{
+    width: 90%;
+}
+.sidebarSearch{
+    margin: 10px auto;
+}
+.sidebarSearch input{
+    width: 100%;
+    margin: auto;
+    border: none;
+    background-color: rgb(245, 240, 240);
+    padding: 9px 4px;
+}
+.sidebarSearch input:focus{
+    outline: none;
+}
+.sidebarCategories, .sidebarPrice{
+    margin: 0;
+    padding: 15px 10px;
+    list-style: none;
+    text-transform: capitalize;
+}
+.sidebarCategories{
+    background-color: aliceblue;
+}
+.sidebarCategories h4, .sidebarPrice h4{
+    margin-bottom: 5px;
+}
+.sidebarCategories li{
+    width: auto;
+    padding: 7px 5px;
+    padding-left: 15px;
+    cursor: pointer;
+    margin-left: 30px;
+    transition: 0.4s ease;
+    font-size: small;
+    border-radius: 7px 0 0 7px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.sidebarCategories li:hover{
+    transform: translate(-4%);
+}
+.sidebarCategories .active{
+    background-color: rgb(34, 100, 158);
+    color: white;
+}
+
+.sidebarPrice input{
+    width: 70%;
+}
+.sidebarPrice p{
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+@media only screen and (max-width:700px) {
+    aside{
+    position:relative;
+    margin-top: 0;
+}
+aside > *{
+    width: 100%;
+}
+.sidebarSearch{
+    margin: 3px auto;
+}
+.mobile-filter-btn{
+    text-transform: capitalize;
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(152, 135, 216);
+    color: white;
+    border:2px inset rgb(95, 63, 207);
+    align-items: center;
+    padding: 9px 10px;
+    font-size: 13px;
+    font-weight: lighter;
+    cursor: pointer;
+}
+.mobile-filter-btn.active{
+    background-color: rgb(121, 102, 189);
+}
+.mobile-filter-btn span{
+    font-weight: bold;
+}
+.down-arrow{
+    font-size: 15px;
+    animation: arrowAnimate 2s ease infinite;
+    animation-direction: reverse;
+}
+@keyframes arrowAnimate {
+    from{transform: scale(1.5);} to{transform: scale(1);}
+}
+.wrapper{
+    position: relative;
+}
+.mobile-section{
+    height: 0;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    position: absolute;
+    z-index: 200;
+}
+.mobile-section.active{
+    height: fit-content;
+    animation: animateMobileSection 0.4s ease;
+}
+@keyframes animateMobileSection {
+    from{opacity: 0;}to{opacity: 1;}
+}
+.sidebarSearch input{
+    background-color: rgb(221, 215, 215);
+}
+.sidebarSearch input::placeholder{
+    font-weight: bolder;
+}
+.sidebarCategories, .sidebarPrice{
+    padding:0 26px;
+    background-color: rgb(184, 207, 226);
+    width: 100%;
+    margin: auto;
+}
+.sidebarPrice{
+    padding-bottom: 20px;
+}
+.sidebarCategories{
+    padding-top: 10px;
+}
+.sidebarCategories li:hover{
+    transform: translate(0);
+}
+.sidebarCategories .active{
+    background-color: rgb(34, 100, 158);
+    color: white;
+}
+
+.sidebarPrice input{
+    width: 70%;
+}
+.mobile-whole-wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+}

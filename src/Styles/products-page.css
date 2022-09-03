@@ -1,0 +1,171 @@
+aside{
+    height: fit-content;
+}
+.daily-essential-container img{
+    width: 50%;
+    height: 160px;
+    border-radius: 10px;
+}
+
+.daily-essential-container{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    margin: 50px 70px;
+    justify-content: space-around;
+    row-gap: 30px;
+    column-gap: 20px;
+}
+
+.daily-essential{
+    text-align: center;
+    text-transform: capitalize;
+    border: 2px inset rgb(231, 231, 231);
+    padding: 40px 10px;
+    transition: 0.4s ease-in-out;
+}
+.daily-essential:hover{
+    transform: scale(1.05);
+}
+.DailyEssentialPage{
+    display: grid;
+    grid-template-columns: 24% 74%;
+    font-weight: bold;
+}
+.daily-essential p{
+    margin-top: 10px;
+}
+.daily-essential p:first-child{
+    font-size: 15px;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+}
+.daily-essential p:last-child{
+    font-size: 23px;
+    color:rgb(218, 177, 125);
+}
+.furnitures img{
+    width: 100%;
+    height: 180px;
+}
+
+.products-header{
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    margin:50px auto;
+    background-color: rgb(216, 201, 216);
+    padding: 17px 10px;
+    z-index: 100;
+    position: sticky;
+    top: 0px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.products-header p:first-child{
+    font-size: 25px;
+    color: rgb(94, 28, 94);
+}
+.products-header p:last-child{
+    color: rgb(209, 95, 209);
+}
+.product-info > div{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.details{
+    text-decoration: none;
+    background-color: rgb(73, 59, 87);
+    color: white;
+    height: fit-content;
+    padding: 4px 30px;
+}
+.details:hover{
+    background-color: rgb(123, 88, 158);
+    border: 1px solid black;
+}
+
+
+.no-result{
+    display: grid;
+    place-items: center;
+    animation: noResult 0.5s ease-in-out;
+}
+@keyframes noResult {
+    from{transform: scale(0.1);} to{transform: scale(1);}
+}
+.no-result > div{
+    text-align: center;
+}
+
+
+@media only screen and (max-width:700px) {
+.daily-essential-container img{
+    height: 20vw;
+}
+
+.daily-essential-container{
+    grid-template-columns: repeat(2, 50%);
+    margin: 0 0;
+    column-gap: 5px;
+}
+
+.daily-essential{
+    padding: 20px 10px;
+}
+.daily-essential:hover{
+    transform: scale(1);
+}
+.DailyEssentialPage{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+.daily-essential p{
+    margin-top: 7px;
+}
+.daily-essential p:first-child{
+    font-size: 11px;
+    width: 100%;
+}
+.daily-essential p:last-child{
+    font-size: 21px;
+}
+.furnitures img{
+    width: 100%;
+    height: 23vw;
+}
+
+.products-header{
+    margin:20px auto;
+    background-color: rgb(216, 201, 216);
+    padding: 17px 10px;
+    z-index: 100;
+    position: sticky;
+    top: 0px;
+    font-size: 3.3vw;
+}
+.products-header p:first-child{
+    font-size: 5vw;
+}
+.products-header p:last-child{
+    color: rgb(209, 95, 209);
+}
+.product-info > div{
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+.details{
+    text-decoration: none;
+    background-color: rgb(73, 59, 87);
+    color: white;
+    height: fit-content;
+    padding: 4px 30px;
+}
+.details:hover{
+    background-color: rgb(73, 59, 87);
+    border: none;
+}
+}

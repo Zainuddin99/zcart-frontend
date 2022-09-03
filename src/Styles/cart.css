@@ -1,0 +1,243 @@
+.empty-cart{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+.empty-cart img{
+    width: 200px;
+}
+.fill-btn{
+    background-color: green;
+    margin-top: 30px;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    text-decoration: none;
+    font-size: 19px;
+    margin: 20px;
+}
+
+.mycart-container{
+    width: 85%;
+    margin: 60px auto;
+    text-transform: capitalize;
+}
+.cart-heading, .mycart{
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+    justify-content: space-around;
+    text-align: center;
+}
+.cart-heading > *, .mycart >*{
+    padding: 20px;
+    font-size: 20px;
+}
+.cart-heading > *{
+    color: rgb(114, 110, 110);
+}
+.close{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: fit-content;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    transition: 0.2s ease;
+}
+.close:hover{
+    background-color: white;
+    border:3px solid black
+}
+.close:hover > *{
+    color: black;
+}
+.close > *{
+    color: red;
+    font-size: 1.4rem;
+}
+.mycart:hover{
+    box-shadow: 5px 5px 5px grey;
+}
+.mycart:hover .close{
+    visibility: visible;
+}
+.mycart{
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+.mycart > *{
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+}
+.mycart > *:nth-child(3){
+    color: rgb(190, 76, 190);
+}
+.mycart > *:nth-child(5){
+    color: rgb(126, 61, 126);
+}
+.item-info{
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    column-gap: 10px;
+}
+.item-info img{
+    width: 100%;
+    height: 100px;
+}
+.item-info{
+    text-align: left;
+}
+.cart-view{
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 100% 100%;
+    background-color: rgb(0, 0, 0,0.3);
+    color: white;
+    display: none;        
+}
+.image:hover .cart-view{
+    display: block;
+}
+.image{
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cart{
+    font-size: 18px;
+    font-weight: 530;
+    width: 35%;
+    background-color: antiquewhite;
+    padding: 15px 40px;
+    float: right;
+    clear: both;
+    margin: 30px 0;
+}
+.final-cart p{
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(148, 94, 23);
+}
+.final-cart span{
+    font-weight: bold;
+    color: rgb(105, 74, 34);
+}
+footer{
+    clear: both;
+}
+
+.continue-btn{
+    background-color:rgb(154, 205, 50);
+    color: darkgreen;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: absolute;
+    left: 50%;
+    font-weight: 500;
+    padding: 7px 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transform: translate(-50%);
+    margin: 10px;
+    border: 1px solid darkgreen;
+    transition: 0.3s ease;
+}
+.continue-btn:hover{
+    background-color: darkgreen;
+    color: rgb(154, 205, 50);
+}
+
+
+@media only screen and (max-width:700px) {
+    .empty-cart{
+    width: 100%;
+}
+.empty-cart h1{
+    font-size: large;
+}
+.empty-cart img{
+    width: 100px;
+}
+.fill-btn{
+    font-size: 14px;
+}
+
+.mycart-container{
+    width: 100%;
+    margin-left: 8px;
+}
+.cart-heading, .mycart{
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+}
+.cart-heading > *, .mycart >*{
+    padding: 7px;
+    font-size: 10px;
+}
+.close{
+    position: static;
+    transform: scale(1.5);
+    visibility: visible;
+    background-color: transparent;
+}
+.close > *{
+    font-size: small;
+    background-color: transparent;
+}
+.close:hover{
+    background-color: transparent;
+    border:none
+}
+.mycart:hover{
+    background-color: rgb(0, 0, 0,0);
+}
+.mycart > *{
+    font-size: 0.9rem;
+    font-weight: bolder;
+}
+.item-info{
+    font-size: 12px;
+    display: block;
+}
+.cart-view{
+    text-decoration: none;
+    position: static;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 100% 100%;
+    background-color: rgb(0, 0, 0,0.3);
+    color: white;
+    display: none;        
+}
+.image:hover .cart-view{
+    display: block;
+}
+.image{
+    display: none;
+}
+
+.final-cart{
+    font-size: 13px;
+    width: 60%;
+    padding: 10px 20px;
+}
+
+.continue-btn{
+    font-size: 0.7rem;
+}
+.continue-btn:hover{
+    background-color: darkgreen;
+    color: rgb(154, 205, 50);
+}
+}
