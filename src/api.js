@@ -1,7 +1,7 @@
 const axios = require('axios')
 require('dotenv').config()
 
-const hostedServerUrl = 'https://z-cart.herokuapp.com'
+const hostedServerUrl = 'https://zcart.herokuapp.com'
 const localServerUrl = 'http://localhost:5000'
 
 let URL
